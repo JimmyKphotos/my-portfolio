@@ -14,15 +14,16 @@ const photos = [
 <BaseLayout title="Your Name">
   <h1 class="text-2xl mb-4 text-center">Your Name</h1>
 
-  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
+  <div class="max-w-6xl mx-auto px-4 py-8">
+  <h1 class="text-3xl mb-8 text-center font-semibold">Jimmy Krebsz</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     {photos.map((src) => (
-      <div class="w-full overflow-hidden">
-        <img
-          src={src}
-          alt=""
-          class="w-full h-full object-cover"
-        />
+      <div class="overflow-hidden rounded-md h-64">
+        <img src={src} alt="" class="w-full h-full object-cover" />
       </div>
     ))}
   </div>
+</div>
+
 </BaseLayout>
