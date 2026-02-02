@@ -16,11 +16,12 @@ const photos = [
   <h1 class="text-3xl mb-8 text-center font-semibold">Jimmy Krebsz</h1>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    {photos.map(src => (
-      <div class="w-full aspect-square overflow-hidden rounded-md">
-        <img src={`/photos/${src}`} alt="" class="w-full h-full object-cover" />
-      </div>
-    ))}
-  </div>
+  {photos.map(src => (
+    <div class="w-full aspect-square overflow-hidden rounded-md">
+      <img src={`/photos/${src}`} alt="" class="w-full h-full object-cover" />
+    </div>
+  ))}
+</div>
+
 </BaseLayout>
 
