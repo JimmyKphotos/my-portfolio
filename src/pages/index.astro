@@ -1,27 +1,28 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-// List your images here (just filenames in public/photos/)
 const photos = [
-  "photo1.jpg",
-  "photo2.jpg",
-  "photo3.jpg",
-  "photo4.jpg",
-  "photo5.jpg",
-  "photo6.jpg"
+  "/photos/photo1.jpg",
+  "/photos/photo2.jpg",
+  "/photos/photo3.jpg",
+  "/photos/photo4.jpg",
+  "/photos/photo5.jpg",
+  "/photos/photo6.jpg",
 ];
 ---
 
-<BaseLayout title="Jimmy Krebsz">
-  <h1 class="text-3xl mb-8 text-center font-semibold">Jimmy Krebsz</h1>
+<BaseLayout title="Your Name">
+  <h1 class="text-2xl mb-4 text-center">Your Name</h1>
 
-  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-  {photos.map(src => (
-    <div class="w-full aspect-square overflow-hidden rounded-md">
-      <img src={`/photos/${src}`} alt="" class="w-full h-full object-cover" />
-    </div>
-  ))}
-</div>
-
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
+    {photos.map((src) => (
+      <div class="w-full overflow-hidden">
+        <img
+          src={src}
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </div>
+    ))}
+  </div>
 </BaseLayout>
-
