@@ -18,14 +18,13 @@ const photos = [
 
   <h1 class="text-3xl mb-8 text-center font-semibold">Jimmy Krebsz</h1>
 
-  <!-- 3x3 grid -->
   <div class="max-w-7xl mx-auto grid grid-cols-3 gap-4">
     {photos.map((src) => (
-      <div class="relative w-full pb-full overflow-hidden rounded-md">
+      <div class="bg-gray-200 rounded-md overflow-hidden">
         <img
           src={`/photos/${src}`}
           alt=""
-          class="absolute top-0 left-0 w-full h-full object-cover"
+          class="w-full h-[200px] object-cover"
         />
       </div>
     ))}
