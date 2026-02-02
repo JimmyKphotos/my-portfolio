@@ -9,6 +9,11 @@ const photos = [
   "photo5.jpg",
   "photo6.jpg"
 ];
+
+// Ensure 9 items for a 3x3 grid
+const totalSlots = 9;
+const placeholdersNeeded = totalSlots - photos.length;
+const galleryItems = [...photos, ...Array(placeholdersNeeded).fill(null)];
 ---
 
 <BaseLayout title="Jimmy Krebsz">
@@ -16,13 +21,17 @@ const photos = [
   <h1 class="text-3xl mb-8 text-center font-semibold">Jimmy Krebsz</h1>
 
   <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    {photos.map((src) => (
-      <div class="relative w-full pb-[75%] overflow-hidden rounded-md">
-        <img
-          src={`/photos/${src}`}
-          alt=""
-          class="absolute top-0 left-0 w-full h-full object-cover"
-        />
+    {galleryItems.map((src) => (
+      <div class="relative w-full aspect-square overflow-hidden rounded-md bg-gray-200 flex items-center justify-center">
+        {src ? (
+          <img
+            src={`/photos/${src}`}
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        ) : (
+          <span class="text-gray-500 text-lg">Coming Soon</span>
+        )}
       </div>
     ))}
   </div>
