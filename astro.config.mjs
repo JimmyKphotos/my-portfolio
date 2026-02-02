@@ -4,7 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://JimmyKphotos.github.io/your-repo-name/', // ← your GitHub Pages URL
-  base: '/your-repo-name/', // ← important for GitHub Pages
+  site: 'https://JimmyKphotos.github.io/my-portfolio/', // ← your GitHub Pages URL
+  base: '/my-portfolio/', // ← important for GitHub Pages
   vite: {
-    plugins: [tailwindcs]()
+    plugins: [tailwindcss()] // ← fix the typo here (was "tailwindcs()")
+  }
+});
